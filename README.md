@@ -7,3 +7,9 @@
 
 <!-- Activity Graph -->
 [![Sai's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=SaiGaneshGupta6&theme=github-compact&bg_color=000000&area=true&days=60&custom_title=My%20Contributions%20in%20last%20two%20months)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./output/pacman-contribution-graph.svg">
+  <img alt="Pac-Man Contribution Graph" src="./output/pacman-contribution-graph.svg">
+</picture>
