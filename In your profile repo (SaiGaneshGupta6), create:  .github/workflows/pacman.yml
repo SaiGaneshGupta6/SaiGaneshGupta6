@@ -1,0 +1,48 @@
+name: Pac-Man Contribution Graph
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Runs daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout your repo
+      - uses: actions/checkout@v3
+
+      # Clone Pac-Man contribution graph generator
+      - name: Clone Pac-Man Graph Repo
+        run: git clone https://github.com/abozanona/pacman-contribution-graph.git pacman
+
+      # Install dependencies
+      - name: Install dependencies
+        run: cd pacman && npm install
+
+      # Generate Pac-Man Light Theme
+      - name: Generate Pac-Man Light Theme
+        run: cd pacman && node index.js --username SaiGaneshGupta6 --theme light
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Generate Pac-Man Dark Theme
+      - name: Generate Pac-Man Dark Theme
+        run: cd pacman && node index.js --username SaiGaneshGupta6 --theme dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Move generated SVGs into output folder
+      - name: Move generated SVGs
+        run: |
+          mkdir -p output
+          mv pacman/output/* output/
+
+      # Commit and push new graphs
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/
+          git commit -m "Update Pac-Man contribution graphs" || echo "No changes to commit"
+          git push
