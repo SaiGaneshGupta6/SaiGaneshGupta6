@@ -1,1 +1,1 @@
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SaiGaneshGupta6&layout=compact&theme=radical&count_private=true)
+[![GitHub Streak](https://streak-stats.demolab.com?user=SaiGaneshGupta6&theme=dark)](https://git.io/streak-stats)
