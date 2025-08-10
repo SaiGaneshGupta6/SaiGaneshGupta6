@@ -1,4 +1,2 @@
 [![GitHub Streak](https://streak-stats.demolab.com?user=SaiGaneshGupta6&theme=dark)](https://git.io/streak-stats)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SaiGaneshGupta6&layout=compact&theme=radical)
-
 [![Sai's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=SaiGaneshGupta6&theme=github-compact&bg_color=000000&area=true&days=60&custom_title=My%20Contributions%20in%20last%20two%20months)](https://github.com/ashutosh00710/github-readme-activity-graph)
